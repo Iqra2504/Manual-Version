@@ -1,0 +1,363 @@
+/* DESIGN SYSTEM TOKENS FRAMEWORK DEFINITIONS */
+:root {
+    --bg-base: #ffffff;
+    --bg-alt: #f8fafc;
+    --primary-color: #2563eb;
+    --text-main: #0f172a;
+    --text-muted: #64748b;
+    --accent-dark: #0d1b2a;
+    --max-width: 1200px;
+}
+
+/* ROOT AND GLOBAL RESET RULES MATRIX */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-base);
+    color: var(--text-main);
+    font-family: system-ui, -apple-system, sans-serif;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.section-header-block {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.section-header-block h2 {
+    font-size: 2.5rem;
+    color: var(--text-main);
+    font-weight: 700;
+}
+
+/* SECTION 1: FIXED NAVBAR COMPONENT CONFIGURATIONS */
+.navbar-container {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: 70px;
+    background-color: rgba(255, 255, 255, 0.95);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    border-bottom: 1px solid #e2e8f0;
+    backdrop-filter: blur(8px);
+}
+
+.logo-box {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.nav-links-wrapper .nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.nav-menu a:hover, .nav-menu a.active {
+    color: var(--primary-color);
+}
+
+.cta-buy-btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* SECTION 2: HERO SECTION GRID RULES */
+.hero-section {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-alt);
+    padding: 60px 0;
+}
+
+.hero-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+
+.left-content-col {
+    flex: 1;
+}
+
+.eyebrow-tag {
+    font-size: 0.875rem;
+    color: var(--primary-color);
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.main-heading {
+    font-size: 4rem;
+    line-height: 1.1;
+    margin: 16px 0;
+    color: var(--text-main);
+}
+
+.sub-text-desc {
+    color: var(--text-muted);
+    font-size: 1.125rem;
+    margin-bottom: 32px;
+    max-width: 480px;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 14px 32px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.right-image-col {
+    flex: 1;
+}
+
+.hero-image-placeholder {
+    width: 100%;
+    height: 500px;
+    background-color: #cbd5e1;
+    border-radius: 8px;
+    background-image: linear-gradient(45deg, #cbd5e1, #e2e8f0);
+}
+
+/* SECTION 3: ABOUT US MODULAR CARDS ENGINE */
+.about-section {
+    padding: 80px 0;
+}
+
+.cards-flex-wrapper {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.profile-card {
+    flex: 1 1 300px;
+    background: white;
+    padding: 24px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    transition: transform 0.3s ease;
+}
+
+.profile-card:hover {
+    transform: translateY(-4px);
+}
+
+.card-img-holder {
+    height: 240px;
+    background-color: #cbd5e1;
+    border-radius: 6px;
+    margin-bottom: 16px;
+}
+
+.card-meta {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+}
+
+.profile-card h3 {
+    margin: 8px 0;
+}
+
+.profile-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+}
+
+.card-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* SALE BANNER RULES INTERMISSION */
+.sale-banner {
+    background-color: #ef4444;
+    color: white;
+    text-align: center;
+    padding: 80px 24px;
+}
+
+.banner-content h2 {
+    font-size: 3rem;
+    margin: 12px 0 24px 0;
+}
+
+.banner-btn {
+    background: white;
+    color: #ef4444;
+    padding: 12px 28px;
+    border: none;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+/* SECTION 4: STORE FEATURES MODULE ARRAY */
+.features-section {
+    padding: 80px 0;
+    background-color: var(--bg-alt);
+}
+
+.features-wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.feature-item-cell {
+    flex: 1 1 200px;
+    text-align: center;
+    padding: 20px;
+}
+
+.icon-holder {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+}
+
+/* SECTION 5: PRODUCTS GRID VIEWPORT MANAGEMENT */
+.products-section {
+    padding: 80px 0;
+}
+
+.products-wrapper-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.product-card-item {
+    flex: 1 1 220px;
+    background: white;
+    border-radius: 6px;
+    padding: 16px;
+    border: 1px solid #e2e8f0;
+}
+
+.product-img {
+    height: 280px;
+    background-color: #cbd5e1;
+    border-radius: 4px;
+    margin-bottom: 12px;
+}
+
+.prod-cat {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.product-card-item h3 {
+    font-size: 1.1rem;
+    margin: 4px 0;
+}
+
+.price {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* SECTION 7: GLOBAL FOOTER CONFIGURATIONS LAYOUT */
+.footer-landmark-container {
+    background-color: var(--accent-dark);
+    color: #94a3b8;
+    padding: 60px 0 20px 0;
+}
+
+.top-row-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    border-bottom: 1px solid #1e3a55;
+    padding-bottom: 40px;
+}
+
+.brand-meta-column {
+    flex: 2 1 400px;
+}
+
+.footer-logo {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+.corporate-slogan {
+    font-size: 0.95rem;
+    max-width: 440px;
+}
+
+.quick-links-col {
+    flex: 1 1 150px;
+}
+
+.quick-links-col h4 {
+    color: white;
+    margin-bottom: 16px;
+}
+
+.quick-links-col ul {
+    list-style: none;
+}
+
+.quick-links-col ul li {
+    margin-bottom: 10px;
+}
+
+.quick-links-col ul li a {
+    color: #94a3b8;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.quick-links-col ul li a:hover {
+    color: white;
+}
+
+.bottom-subordinate-bar {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 0.85rem;
+}
